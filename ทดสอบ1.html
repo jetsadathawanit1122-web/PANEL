@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEEMXMODE V1</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#090510;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:#fff;
+}
+
+.panel{
+width:380px;
+background:#120b1f;
+border-radius:35px;
+padding:25px;
+box-shadow:0 0 30px rgba(255,0,80,.25);
+}
+
+.logo{
+width:130px;
+height:130px;
+margin:auto;
+border-radius:30px;
+background:linear-gradient(45deg,#ff004c,#8b0000);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:bold;
+box-shadow:0 0 25px #ff004c;
+}
+
+.title{
+text-align:center;
+font-size:36px;
+font-weight:bold;
+margin-top:15px;
+}
+
+.sub{
+text-align:center;
+color:#ff1e56;
+letter-spacing:5px;
+margin-bottom:30px;
+}
+
+.card{
+background:#1a1326;
+border-radius:25px;
+padding:18px;
+margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:45px;
+height:45px;
+border-radius:12px;
+background:#290a18;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+color:#ff1e56;
+}
+
+.switch{
+position:relative;
+width:60px;
+height:32px;
+}
+
+.switch input{
+display:none;
+}
+
+.slider{
+position:absolute;
+cursor:pointer;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:#333;
+border-radius:50px;
+transition:.3s;
+}
+
+.slider:before{
+content:"";
+position:absolute;
+width:24px;
+height:24px;
+left:4px;
+top:4px;
+background:white;
+border-radius:50%;
+transition:.3s;
+}
+
+input:checked + .slider{
+background:#ff004c;
+}
+
+input:checked + .slider:before{
+transform:translateX(28px);
+}
+
+.activate{
+width:100%;
+height:70px;
+border:none;
+border-radius:25px;
+font-size:24px;
+font-weight:bold;
+margin-top:20px;
+cursor:pointer;
+background:white;
+}
+
+.status{
+text-align:center;
+margin-top:20px;
+letter-spacing:4px;
+color:#00ff88;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+<div class="logo">𝑭𝑬𝑬𝑴V2</div>
+
+<div class="title">FEEMXMODE</div>
+<div class="sub">𝐅𝐄𝐄𝐌𝐗𝐌𝐎𝐃𝐄เวอร์ชั่น2</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">💀</div>
+<span>ระบบดูดหัว</span>
+</div>
+<label class="switch">
+<input type="checkbox" onclick="playSound()">
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">⚙️</div>
+<span>DPI2110</span>
+</div>
+<label class="switch">
+<input type="checkbox" onclick="playSound()">
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">📱</div>
+<span>เชื่อมต่อเซิร์ฟเวอร์</span>
+</div>
+<label class="switch">
+<input type="checkbox" onclick="playSound()">
+<span class="slider"></span>
+</label>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🛡️</div>
+<span>โหมดกันแบน</span>
+</div>
+<label class="switch">
+<input type="checkbox" onclick="playSound()">
+<span class="slider"></span>
+</label>
+</div> 
+<div class="card">
+<div class="left">
+<div class="icon">📱</div>
+<span>เลือกรุ่นมือถือ</span>
+</div><select id="phoneModel" style="background:#290a18;color:white;border:none;padding:8px;border-radius:10px;width:150px;"><option>OPPO A3</option>
+<option>OPPO A3x 5G</option>
+<option>OPPO A5 Pro 5G</option>
+<option>OPPO Reno 13F 5G</option>
+<option>OPPO Reno 14 5G</option><option>Samsung Galaxy A06</option>
+<option>Samsung Galaxy A15</option>
+<option>Samsung Galaxy A25 5G</option>
+<option>Samsung Galaxy A35 5G</option>
+<option>Samsung Galaxy A55 5G</option>
+<option>Samsung Galaxy S24 Ultra</option>
+<option>Samsung Galaxy S25 Ultra</option><option>Redmi 13</option>
+<option>Redmi Note 13</option>
+<option>Redmi Note 14</option>
+<option>Redmi Note 14 Pro</option><option>POCO X6 Pro</option>
+<option>POCO X7</option>
+<option>POCO X7 Pro</option>
+<option>POCO F6</option>
+<option>POCO F7</option><option>Realme Note 60</option>
+<option>Realme C61</option>
+<option>Realme C75</option>
+<option>Realme 13 5G</option>
+<option>Realme GT 7</option><option>Vivo Y03</option>
+<option>Vivo Y18</option>
+<option>Vivo V40 Lite</option>
+<option>Vivo V50 5G</option><option>Infinix Smart 9</option>
+<option>Infinix Note 50</option>
+<option>Infinix GT 20 Pro</option><option>TECNO Spark 30</option>
+<option>TECNO POVA 6</option><option>iPhone 13</option>
+<option>iPhone 14</option>
+<option>iPhone 15</option>
+<option>iPhone 15 Pro Max</option>
+<option>iPhone 16</option>
+<option>iPhone 16 Plus</option>
+<option>iPhone 16 Pro</option>
+<option>iPhone 16 Pro Max</option><option>ROG Phone 8</option>
+<option>ROG Phone 9</option>
+<option>RedMagic 9 Pro</option>
+<option>RedMagic 10 Pro</option></select>
+</div>
+
+<button class="activate" onclick="activatePanel()">
+ยืนยันตั้งค่า
+</button>
+
+<div style="margin-top:15px;">
+    <div style="width:100%;height:20px;background:#222;border-radius:20px;overflow:hidden;">
+        <div id="progressBar" style="width:0%;height:100%;background:#00ff88;transition:1s;"></div>
+    </div><div id="progressText" style="text-align:center;margin-top:5px;color:#00ff88;">
+    0%
+</div>
+
+</div>
+
+<div class="status" id="status">
+พร้อมใช้งาน
+</div>
+
+</div>
+
+<!-- 🔊 เสียงคีย์บอร์ด -->
+<audio id="clickSound" src="https://www.soundjay.com/mechanical/keyboard-1.mp3"></audio>
+
+<script>
+function playSound(){
+    const sound = document.getElementById("clickSound");
+    sound.currentTime = 0;
+    sound.play();
+}
+
+function activatePanel(){
+playSound();
+
+let phone = document.getElementById("phoneModel").value;
+
+let progress = 0;
+
+let timer = setInterval(() => {
+
+    progress += 1;
+
+    document.getElementById("progressBar").style.width =
+    progress + "%";
+
+    document.getElementById("progressText").innerHTML =
+    progress + "%";
+
+    if(progress >= 100){
+        clearInterval(timer);
+
+        document.getElementById("status").innerHTML =
+        "✓ เปิดใช้งานแล้ว | " + phone;
+
+        alert("✅ ยืนยันแล้ว\n📱 รุ่น: " + phone);
+    }
+
+}, 200);
+
+}
+
+</script>
+
+</body>
+</html>
